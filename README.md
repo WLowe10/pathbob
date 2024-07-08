@@ -2,7 +2,7 @@
 
 Simple path/URL builder.
 
-An alternative to pathcat. pathbob is more efficient as it parses your path once and returns a template.
+An alternative to pathcat. pathbob is a more efficient solution as it parses your path once and returns a template.
 
 ## Highlights
 
