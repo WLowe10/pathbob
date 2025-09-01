@@ -1,3 +1,6 @@
 node_modules
 dist
-dev.ts
+coverage
+
+# misc
+.DS_Store
