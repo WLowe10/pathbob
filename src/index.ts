@@ -42,10 +42,12 @@ function splitPathIntoSegments(path: string): Segment[] {
 				value: path.slice(lastIndex, match.index),
 			});
 		}
+
 		segments.push({
 			type: "dynamic",
-			key: match[1],
+			key: match[1]!,
 		});
+
 		lastIndex = paramRegex.lastIndex;
 	}
 
@@ -102,7 +104,7 @@ export function parse<T extends string, K extends string | undefined = undefined
 			const searchParams = new URLSearchParams();
 
 			for (let i = 0; i < paramKeys.length; i++) {
-				const key = paramKeys[i];
+				const key = paramKeys[i]!;
 
 				if (!usedParams.has(key)) {
 					const value = params[key];
