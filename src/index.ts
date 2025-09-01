@@ -113,7 +113,7 @@ export function parse<TBase extends string, TPath extends string | undefined = u
 					throw new ParameterNotFoundError(segment.key);
 				}
 
-				url += encodeURIComponent(params[segment.key]);
+				url += encodeURIComponent(paramValue);
 			}
 		}
 
