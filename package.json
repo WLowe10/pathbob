@@ -21,7 +21,10 @@
 	"scripts": {
 		"build": "tsup",
 		"format": "prettier --write .",
-		"type-check": "tsc --noEmit",
+		"test": "vitest run",
+		"test-watch": "vitest watch",
+		"test-coverage": "vitest run --coverage",
+		"typecheck": "tsc --noEmit",
 		"clean": "pnpm clean:dist && pnpm clean:modules",
 		"clean:dist": "rm -rf dist",
 		"clean:modules": "rm -rf node_modules"
@@ -47,6 +50,7 @@
 		"prettier": "^3.6.2",
 		"tsup": "^8.5.0",
 		"tsx": "^4.20.5",
-		"typescript": "^5.9.2"
+		"typescript": "^5.9.2",
+		"vitest": "^3.2.4"
 	}
 }
