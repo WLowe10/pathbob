@@ -19,9 +19,12 @@
 	},
 	"sideEffects": false,
 	"scripts": {
-		"build": " tsup src/index.ts --dts --format cjs,esm",
-		"publish-package": "pnpm build && pnpm publish",
-		"type-check": "tsc --noEmit"
+		"build": "tsup",
+		"format": "prettier --write .",
+		"type-check": "tsc --noEmit",
+		"clean": "pnpm clean:dist && pnpm clean:modules",
+		"clean:dist": "rm -rf dist",
+		"clean:modules": "rm -rf node_modules"
 	},
 	"files": [
 		"dist",
@@ -41,8 +44,8 @@
 		}
 	},
 	"devDependencies": {
-		"tsup": "^8.1.0",
-		"tsx": "^4.16.2",
-		"typescript": "^5.5.3"
+		"tsup": "^8.5.0",
+		"tsx": "^4.20.5",
+		"typescript": "^5.9.2"
 	}
 }
